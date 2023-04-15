@@ -1,0 +1,463 @@
+/* || GENERAL STYLES */
+
+:root {
+  --primary-color: rgb(244, 237, 228);
+  --secondary-color: #536390;
+  --font-color: #000000;
+  --bg-color: rgb(84, 21, 84);
+  --heading-color: #000000;
+  --em-yellow: rgb(236, 178, 46);
+  --link-color: white;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+  background-color: var(--bg-color);
+  background-size: cover;
+  color: var(--font-color);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--heading-color);
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+button{
+  cursor: pointer;
+}
+
+p {
+  color: var(--primary-color);
+  font-weight: lighter;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+}
+
+video{
+  z-index: 1;
+}
+
+nav{
+  z-index: 9999;
+}
+
+/* */
+
+/* || NAVIGATION STYLES */
+
+.top{
+  margin-left: 0rem;
+}
+
+.page-nav{
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 2.9rem 1.2rem 2.9rem;
+  transition: position 0.2s;
+  margin-bottom: 1.8rem;
+}
+
+.slack-logo{
+  display: flex;
+}
+
+.slack-logo img{
+  width: 6.25rem;
+  height: auto;
+}
+
+.main-nav-links{
+  display: flex;
+}
+
+.main-nav-links:nth-child(1){
+  position: relative;
+}
+
+.dropdown-icon{
+  width: 0.5rem;
+  height: auto;
+}
+
+.main-nav-links li{
+  margin-left: 2rem;
+}
+
+.page-nav a{
+  border-bottom: 0.1rem solid var(--bg-color);
+}
+
+.page-nav a:hover{
+  border-bottom: 0.1rem solid white;
+}
+
+.search-icon{
+  margin-left: 7rem;
+}
+
+.sign-in-link{
+  margin-left: 3rem;
+}
+
+.nav-buttons-free{
+  margin-left: 3rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.talk-for-free{
+  background: var(--bg-color);
+  border: 0.1rem solid white;
+}
+
+.talk-for-free:hover{
+  border: 0.2rem solid white;
+}
+
+.try-for-free{
+  background: white;
+  border: 0.1rem solid var(--bg-color);
+  color: var(--bg-color);
+}
+
+.talk-for-free, .try-for-free{
+  width: 9rem;
+  height: 2.8rem;
+  border-radius: 0.3rem;
+  transition: all 0.15s;
+}
+
+.try-for-free p{
+  color: var(--bg-color);
+  font-size: 0.9rem;
+}
+
+.try-for-free:hover{
+  border: 0.2rem solid var(--bg-color);
+}
+
+.float-nav{
+  position: fixed;
+  background-color: white;
+  top: 0.5rem;
+  left: 1rem;
+  border-radius: 1000rem;
+  box-shadow: 0px 0px 0rem 0rem rgb(213, 213, 213);
+}
+
+.float-nav .slack-logo img{
+  filter: brightness(0%) saturate(100%);
+}
+
+.float-nav a{
+  color: black;
+  border: 0.1rem solid white;
+}
+
+.float-nav a:hover{
+  border-bottom: 0.1rem solid black;
+}
+
+.float-nav .main-nav-links img{
+  filter: brightness(0%) saturate(100%);
+}
+
+.float-nav .search-icon img{
+  filter: brightness(0%) saturate(100%);
+}
+
+.float-nav .talk-for-free{
+  background: white;
+  border: 0.1rem solid var(--bg-color);
+}
+
+.float-nav .talk-for-free p{
+  color: var(--bg-color);
+}
+
+.float-nav .talk-for-free:hover{
+  border: 0.2rem solid var(--bg-color);
+}
+
+.float-nav .try-for-free{
+  background: var(--bg-color);
+}
+
+.float-nav .try-for-free p{
+  color: white;
+}
+
+.float-nav .try-for-free:hover{
+  border: 0.2rem solid white;
+}
+
+.float-nav .empty-prod{
+  background-color: white;
+}
+
+.slack-logo a{
+  border: 0rem;
+}
+
+.slack-logo a:hover{
+  border: 0rem;
+}
+
+.product a{
+  margin-bottom: 0rem;
+}
+
+.prod-links{
+  position: absolute;
+  width: 13rem;
+  height: auto;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  margin-left: -0.8rem;
+}
+
+.empty-prod{
+  width: 100%;
+  height: 1rem;
+  background-color: var(--bg-color);
+}
+
+.prod-links a:first-child{
+  margin-top: 0.5rem;
+}
+
+.prod-links a{
+  border: 0rem;
+  color: #000000;
+  padding: 0.4rem 0.4rem 0.4rem 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: lighter;
+  font-size: 0.85rem;
+}
+
+.prod-links a:hover{
+  border: 0rem;
+  color: white;
+  background-color: #1269a9;
+}
+
+.product:hover .prod-links{
+  display: flex;
+}
+
+/* */
+
+/* main top */
+
+.main{
+  display: flex;
+  margin-top: 1rem;
+  overflow: hidden;
+  padding-bottom: 4.3rem;
+}
+
+.main-content{
+  flex: 1 auto;
+  margin-left: 2.9rem;
+}
+
+.main-video{
+  flex: 1 auto;
+  width:55vw;
+  height: auto;
+  margin-right: -8rem;
+}
+
+.main-heading{
+  font-size: 3.5rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin: 0rem 0rem 0rem 0rem;
+  line-height: 4.6rem;
+}
+
+.yellow-em{
+  color: var(--em-yellow);
+  font-style: normal;
+}
+
+.main-intro{
+  max-width: 45vw;
+}
+
+.signup-buttons{
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.signup-w-mail{
+  background: white;
+  border: 0.1rem solid var(--bg-color);
+  color: var(--bg-color);
+  width: 20rem;
+}
+
+.signup-w-mail p{
+  color: var(--bg-color);
+}
+
+.signup-w-google{
+  background: royalblue;
+  color: white;
+  border: 0rem;
+  margin-left: 0.5rem;
+  padding: 0.4rem 1rem 0.4rem 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signup-w-google, .signup-w-mail{
+  height: 3.5rem;
+  border-radius: 0.3rem;
+  transition: all 0.15s;
+  letter-spacing: 0.095rem;
+}
+
+.signup-w-mail:active{
+  background-color: var(--bg-color);
+}
+
+.signup-w-google:active{
+  background-color: #1269a9;
+}
+
+.google-logo{
+  width: 1.3rem;
+  height: auto;
+  padding: 0.9rem;
+  background-color: white;
+  border-radius: 0.1rem;
+  margin:0rem 1rem 0rem 0rem;
+}
+
+.button{
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* */
+
+/* middle companies*/
+
+.middle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+.comp-trust-text{
+  color: black;
+  margin: 3rem 0rem 2rem 0rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.companies-logo{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.companies-logo img{
+  height: 2.5rem;
+  width: auto;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+/* */
+
+/* middle functions */
+
+.mid-func{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 4.5rem;
+}
+
+.mid-func-h{
+  font-size: 2.9rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  line-height: 3.7rem;
+}
+
+.mid-func-text{
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+.mid-func-vid{
+  width: 38rem;
+  height: auto;
+}
+
+.mid-func-cont{
+  width: 40vw;
+}
+
+.mid-func-link{
+  font-size: 1rem;
+  color: #1269a9;
+  font-weight: lighter;
+}
+
+.team-integ-text, .work-fast-text{
+  margin-right: 3rem;
+}
+
+.work-flex-text{
+  margin-left: 3rem;
+}
+
+/* */
+

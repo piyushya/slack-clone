@@ -1,0 +1,20 @@
+{
+  "name": "slack-clone",
+  "version": "1.0.0",
+  "description": "A clone of slack website UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx parcel src/index.html",
+    "format": "npx prettier --write src/index.html src/index.css src/index.js",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Piyush",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.38.0",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^2.8.7"
+  }
+}
